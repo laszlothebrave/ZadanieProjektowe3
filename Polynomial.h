@@ -29,6 +29,8 @@ public:
     void calculateAreas();
 
     void calculateVolume();
+
+    double getValue(int x, int y, int z);
 };
 
 

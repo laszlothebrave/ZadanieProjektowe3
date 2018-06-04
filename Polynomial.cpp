@@ -52,7 +52,10 @@ void Polynomial::setJ() {
 }
 
 void Polynomial::calculatePoints() {
-
+    tab[0] = getValue(0,0,0);
+    tab[1] = getValue(0,0,1);
+    tab[2] = getValue(0,1,0);
+    tab[3] = getValue(1,0,0);
 }
 
 void Polynomial::calculateLines() {
@@ -64,5 +67,14 @@ void Polynomial::calculateAreas() {
 }
 
 void Polynomial::calculateVolume() {
+    double x = -(4 *b *c *g - f*f* g - 2* c* d* h + e *f* h - 2 *b* e* i + d *f *i)/(2 *(4 *a* b* c - c *d*d - b* e*e + d* e* f - a* f*f));
+    double y = -(2*c*d*g - e*f*g - 4*a*c*h + Power(e,2)*h - d*e*i + 2*a*f*i)/
+               (2.*(-4*a*b*c + c*Power(d,2) + b*Power(e,2) - d*e*f + a*Power(f,2);
+    double z = -(2*b*e*g - d*f*g - d*e*h + 2*a*f*h - 4*a*b*i + Power(d,2)*i)/
+    (2.*(-4*a*b*c + c*Power(d,2) + b*Power(e,2) - d*e*f + a*Power(f,2)));
+    tab[14] = 5;
+}
 
+double Polynomial::getValue(int x, int y, int z) {
+    return a*x*x + b*y*y + c*z*z + d*x*y + e*x*z + f*y*z + g*x + h*y + i*z + j;
 }
