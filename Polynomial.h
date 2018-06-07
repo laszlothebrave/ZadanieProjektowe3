@@ -8,15 +8,25 @@
 
 class Polynomial {
 public:
-    double tab[15];
-    double a,b,c,d,e,f,g,h,i,j,min,max;
-    Polynomial(double a, double b, double c, double d, double e, double f, double g, double h, double i);
+
+    double a, b, c, d, e, f, g, h, i, j, min, max;
+
+    Polynomial(const double &a,
+               const double &b,
+               const double &c,
+               const double &d,
+               const double &e,
+               const double &f,
+               const double &g,
+               const double &h,
+               const double &i,
+               double j);
 
     Polynomial getEuklides();
 
-    int getJ();
+    double getJ();
 
-    int getMax();
+    double getMax();
 
     void setMax();
 
@@ -30,7 +40,11 @@ public:
 
     void calculateVolume();
 
-    double getValue(int x, int y, int z);
+    void checkExtr(double maxProp);
+
+    double getValue(double x, double y, double z);
+
+    bool isInDomain(double x, double y, double z);
 };
 
 
